@@ -1,0 +1,16 @@
+    Primary Color: Electric Blue (#007BFF) - This vibrant color is great for drawing attention and conveying trustworthiness.
+    Secondary Color: Dark Gray (#333333) - Provides a professional and clean look.
+    Accent Color: Lime Green (#32CD32) - Adds a touch of freshness and energy.
+    Background Color: Light Gray (#F5F5F5) - Keeps the design light and spacious.
+    Text Color: Black (#000000) - Ensures readability against light backgrounds.
+
+
+    Header (Menu): This section will include the main navigation menu with links to Home, Products, About Us, Contact Us, and possibly a search bar.
+    Main Banner (1): Feature the latest promotions or new arrivals in the cellphone and gadget category.
+    Highlight Section (2): Showcase top-selling or featured products with images and short descriptions.
+    Promotion Section (3): Highlight ongoing discounts or special offers.
+    Category Section (4): Display various product categories like Smartphones, Tablets, Accessories, etc.
+    Customer Testimonials (5): Show quotes or reviews from satisfied customers.
+    Newsletter Signup (6): Encourage visitors to subscribe to your newsletter for updates and promotions.
+    Blog/News (7): Share the latest news or blog posts related to tech and gadgets.
+    Footer: Include links to privacy policy, terms of service, social media links, and contact information.
