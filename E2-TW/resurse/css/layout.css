@@ -35,13 +35,6 @@ html{
   }
 }
 
-
-
-
-
-
-
-
 #grid-pagina > *{
     outline: 3px solid black;
     padding: 1em;
@@ -72,3 +65,116 @@ html{
     grid-area: rama-video;
   }
   
+
+  @media print {
+    a,
+    a:visited {
+      text-decoration: none;
+      color: #333;
+    }
+  
+    footer {
+      page-break-before: always;
+    }
+  
+    footer * {
+      color: #333 !important;
+    }
+    .link-top{
+      opacity: 0;
+    }
+    body,
+    body * {
+      background: none;
+    }
+  
+    header {
+      background: none;
+    }
+    .banner {
+      display: inline-block;
+      width: 80%;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: auto;
+  
+      text-align: center;
+      text-align: center;
+      margin: 0 auto;
+      border: 5px dotted black;
+    }
+    
+    #watermark {
+      display: block;
+      position: fixed;
+      
+      bottom: 0;
+      right: 0;
+    }
+  
+    #watermark::after {
+      padding: 5px;
+      display: block;
+      background: white;
+      width: 100px;
+      height: 2cm;
+      border: double 5px black;
+      opacity: 0.65;
+
+      border-radius: 10px;
+      content: "Copyright Apostu Mihai-Adrian";
+    }
+    .main-heading {
+      position: relative;
+      background: none;
+      display: block;
+      margin-top: 50%;
+      text-align: center;
+      font-size: 2.5rem;
+      text-decoration: underline;
+      page-break-after: always;
+    }
+    #span,
+    #price-tag:visited,
+    #price-tag:active,
+    a:visited,
+    a:link {
+      color: #333;
+      text-decoration: none;
+    }
+    #recommended-items,
+    #see-all {
+      display: none !important;
+    }
+  
+    img,
+    .customer-text,
+    .iframe-container,
+    figure,
+    nav,
+    #link-top {
+      display: none !important;
+    }
+  
+    #grid-pagina {
+      display: block;
+    }
+  }
+  @page {
+    size: A4 portrait;
+    margin-bottom: 2cm;
+    margin-top: 2cm;
+    counter-increment: page;
+  }
+  
+  @page: left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+  }
+  
+  @page: right {
+    margin-right: 2.5cm;
+    margin-left: 0.5cm;
+  } ;
