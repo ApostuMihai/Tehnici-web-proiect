@@ -1,0 +1,127 @@
+body {
+    --primary-color: #007BFF;
+    --secobdary-color: #333333;
+    --accent-color: #32CD32;
+    --background-color: #F5F5F5;
+    --text-color: #000000;
+
+    --dim-spatiere:50px;
+    padding-left: var(--dim-spatiere);
+    padding-right: var(--dim-spatiere);
+
+}
+
+p{
+    color: var(--text-color);
+}
+
+.iframe-video{
+    min-width: 75%;
+  min-height: 75%;
+}
+.imaginePromotie{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+table {
+    width: 100%;
+    margin-top: 100px;
+    font-size: 18px;
+    
+    border-collapse: collapse;
+    & tr {
+      transition: border 0.5s;
+    }
+    & tr:hover {
+      border: 5px solid rgba(0, 0, 0, 0.605);
+    }
+  }
+
+  .support-phone {
+    text-align: center;
+    transform: translateX(-10%);
+    font-weight: 700;
+  }
+  th,
+  td {
+    padding: 16px 20px;
+    text-align: left;
+  }
+
+  thead tr {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  thead th {
+    width: 25%;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #e9ecef;
+  }
+  tfoot tr {
+    background-color: #f8f9fa;
+  }
+
+
+.triangle-icon{
+    font-size: 30px;
+}
+  .link-top-btn{
+    border: 5px solid #F3F3F3;
+    border-radius:100%;
+    padding: 10px;
+    color:#d3d3d3;
+    transition: 1s;
+    opacity: 50%;
+    box-shadow: 0px 0px 30px 10px;
+    
+  }
+.link-top {
+  position: fixed;
+  bottom: 3em;
+  left:3em;
+}
+  .link-top-btn:hover{
+    background-color: rgb(185, 185, 185);
+    color: #757575;
+    border: 5px solid #494949;
+    opacity: 100%;
+    box-shadow: 0px 0px 40px 10px #000000;
+  }
+
+  .iframe-container{
+    display:flex;
+    flex-direction: row;
+  }
+.iframe-tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.iframe-tabs > a {
+    padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--primary-color); /* Adjusted to match the text color */
+            border: 2px solid var(--primary-color); /* Adjust to match border color */
+            border-right: 10px solid var(--primary-color);
+            border-radius: 0 10px 10px 0; /* Rounded corners */
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for 3D effect */
+            transition: 0.4s;
+}
+
+.iframe-tabs > a:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+
+}

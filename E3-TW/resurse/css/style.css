@@ -14,7 +14,10 @@ body {
 p{
     color: var(--text-color);
 }
-
+.hamburger-container{
+  display: none;
+}
+.home-button {display: none;}
 .iframe-video{
     min-width: 75%;
   min-height: 75%;

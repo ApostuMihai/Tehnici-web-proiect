@@ -12,10 +12,15 @@
     <meta name="description" content="Official mobile phone retailer." />
     <meta name="author" content="Apostu Mihai Adrian" />
 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/home-alt.css' rel='stylesheet'>
     <link rel="stylesheet" href="resurse/css/style.css" />
     <link rel="stylesheet" href="resurse/css/layout.css" />
     <link rel="stylesheet" href="resurse/css/navbar.css" />
-
+    <link rel="stylesheet" href="resurse/css/nav1000.css" />
+    <link rel="stylesheet" href="resurse/css/nav700.css" />
+    
     <link
       rel="apple-touch-icon"
       sizes="152x152"
@@ -60,9 +65,18 @@
   <body>
    
    <header>
+
     <nav class="full-menu">
         <ul class="main-menu">
-            <li class="scanner"><a href="#">Home</a>
+            <li>
+              <div class="home"><a  href="#">Home</a></div>
+            <div class="home-button"><a><i class='bx bx-home'></i></a></div>
+            <div class="hamburger-continer">
+             <div class="hamburger-tab"></div>               
+             <div class="hamburger-tab"></div>             
+             <div class="hamburger-tab"></div>               
+            </div>
+
             <div class="horizontal-line"></div></li>
             <li><a href="#">Phones</a>
                 
@@ -231,6 +245,6 @@
             <p id="watermark"></p>
             <small>&copy; <time datetime="2024-05-23">23 mai 2024</time></small>
     </footer>
-
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </body>
 </html>
