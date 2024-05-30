@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="keywords"
+      content="phone, tablet, samsung, apple, technology, huawei, new phone, newest phone, newest iphone, android, ios, smartwatch, gadgets"
+    />
+    <meta name="description" content="Official mobile phone retailer." />
+    <%- include("../fragmente/head") %>
+    <link rel="stylesheet" type="text/css" href="resurse/css/video.css" />
+    <title>BestPhone</title>
+  </head>
+  <body>
+    <%- include("../fragmente/header") %>
+    <main>
+      <div class="video">
+        <video
+          width="800"
+          height="400"
+          controls="controls"
+          poster="https://m-cdn.phonearena.com/images/article/64576-wide-two_1200/The-Best-Phones-in-2022.webp?1669822564"
+          preload="metadata"
+        >
+          <source src="resurse/video/video.mp4" type="video/mp4" />
+          <source src="resurse/video/video.ogv" type="video/ogv" />
+          <track
+            default
+            src="resurse/video/tracks/captions_ro.vtt"
+            kind="captions"
+            srclang="ro"
+            label="Română"
+          />
+          <track
+            src="resurse/video/tracks/captions_en.vtt"
+            kind="captions"
+            srclang="en"
+            label="English"
+          />
+          Browserul dumneavoastră nu suportă tagul video.
+        </video>
+      </div>
+
+      <a class="link-frumos" href="#">link frumos</a>
+    </main>
+    <%- include("../fragmente/footer") %>
+  </body>
+</html>

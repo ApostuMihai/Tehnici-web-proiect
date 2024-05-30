@@ -1,0 +1,36 @@
+.video {
+    align-items: center;
+    margin-left: 50%;
+    transform: translateX(-40%);
+  }
+  video::cue {
+    background: linear-gradient(#1654a9, #accbe1);
+    color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+ .link-frumos:visited{
+  color: black;
+  background-image: radial-gradient(blue, red);
+  background-position: center;
+  background-size: 0%;
+  transition: all 1s;
+}
+.link-frumos:hover{
+  animation-name:link-frumos-hover;
+  animation-duration: 3s;
+ 
+background-size: 100%;
+}
+
+@keyframes link-frumos-hover {
+  from {background-image: radial-gradient(blue, red); background-size: 0%;}
+  to {background-image: radial-gradient(blue, red); background-size: 100%;}
+} 
+
+.link-frumos:active{
+  border: 5px solid black;
+}
