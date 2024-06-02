@@ -1,0 +1,79 @@
+{
+    "cale_galerie": "resurse/images/galerie",
+    "imagini": [
+      {
+        "fisier": "imagine.png",
+        "descriere": "Woman on her phone",
+        "luni":["ianuarie","februarie","iunie"]
+      },
+      {
+        "fisier": "imagine(2).png",
+        "descriere": "Phone on a table",
+        "luni":["octombrie","aprilie","martie"]
+      },
+      {
+        "fisier": "imagine(3).png",
+        "descriere": "Levitating phone",
+        "luni":["ianuarie","februarie","iunie"]
+      },
+      {
+        "fisier": "imagine(3).png",
+        "descriere": "Levitating phone",
+        "luni":["ianuarie","februarie","iunie"]
+      },
+      {
+        "fisier": "imagine(3).png",
+        "descriere": "Levitating phone",
+        "luni":["ianuarie","februarie","iunie"]
+      },
+      {
+        "fisier": "imagine(3).png",
+        "descriere": "Levitating phone",
+        "luni":["ianuarie","februarie","iunie"]
+      },
+      {
+        "fisier": "imagine(4).png",
+        "descriere": "Person on their phone",
+        "luni":["octombrie","aprilie","martie"]
+      },
+      {
+        "fisier": "imagine(5).png",
+        "descriere": "Person using laptop & phone",
+        "luni":["octombrie","aprilie","martie"]
+      },
+      {
+        "fisier": "imagine(6).png",
+        "descriere": "Phone on a table",
+        "luni":["octombrie","aprilie","martie"]
+      },
+      {
+        "fisier": "imagine(7).png",
+        "descriere": "Levitating phone",
+        "luni":["octombrie","aprilie","martie"]
+      },
+      {
+        "fisier": "imagine(8).png",
+        "descriere": "Phone on a table",
+        "luni":["august","noiembrie","mai"]
+      },
+      {
+        "fisier": "imagine(9).png",
+        "descriere": "Holding a phone",
+        "luni":["august","noiembrie","mai"]
+      },
+      {
+        "fisier": "imagine(10).png",
+        "descriere": "Person using a phone",
+        "luni":["august","noiembrie","mai"]
+      },
+      {
+        "fisier": "imagine(11).png",
+        "descriere": "Person on their phone",
+        "luni":["august","noiembrie","mai"]
+      },
+      {
+        "fisier": "imagine(12).png",
+        "descriere": "Person using their phone",
+        "luni":["august","noiembrie","mai"]
+      }]
+}
