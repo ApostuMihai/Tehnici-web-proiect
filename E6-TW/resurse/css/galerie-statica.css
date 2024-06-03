@@ -1,0 +1,170 @@
+#galerie-statica {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-bottom: 6rem;
+  }
+  
+  #grid-galerie {
+    display: grid;
+    counter-reset: nrimag 0;
+    grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 0px 0px;
+      grid-template-areas:
+        "poza1 . poza2"
+        ". poza3 ."
+        "poza4 . poza5"
+        ". poza6 ."
+        "poza7 . poza8"
+        ". poza9 ."
+        "poza10 . poza11"
+        ". poza12 .";
+    }
+  
+    #grid-galerie figure:nth-child(1) {
+      grid-area: poza1;
+    }
+    #grid-galerie figure:nth-child(2) {
+      grid-area: poza2;
+    }
+    #grid-galerie figure:nth-child(3) {
+      grid-area: poza3;
+    }
+    #grid-galerie figure:nth-child(4) {
+      grid-area: poza4;
+    }
+    #grid-galerie figure:nth-child(5) {
+      grid-area: poza5;
+    }
+    #grid-galerie figure:nth-child(6) {
+      grid-area: poza6;
+    }
+    #grid-galerie figure:nth-child(7) {
+      grid-area: poza7;
+    }
+    #grid-galerie figure:nth-child(8) {
+      grid-area: poza8;
+    }
+    #grid-galerie figure:nth-child(9) {
+      grid-area: poza9;
+    }
+    #grid-galerie figure:nth-child(10) {
+      grid-area: poza10;
+    }
+    #grid-galerie figure:nth-child(11) {
+      grid-area: poza11;
+    }
+    #grid-galerie figure:nth-child(12) {
+      grid-area: poza12;
+    }
+  
+  #grid-galerie img {
+    transition: all 0.3s linear;
+    width: 80%;
+    align-items: center;
+  }
+  #grid-galerie figcaption {
+    text-align: center;
+    margin-bottom: 6rem;
+    margin-top: 3.5rem;
+    counter-increment: nrimag 1;
+  }
+  #grid-galerie figcaption::before {
+    content: counter(nrimag, lower-greek) ") ";
+  }
+ 
+
+  .gallery-item {
+    position: relative;
+    margin: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    transition: filter 1.1s;
+}
+
+.gallery-item figcaption {
+    
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px;
+    transition: transform 1.1s;
+}
+
+.gallery-item:hover img {
+    filter: contrast(200%);
+}
+
+.gallery-item:hover figcaption {
+    transform: scale(1.5);
+}
+  @media screen and (max-width: 1000px) {
+    #grid-galerie {
+      margin: 0 auto;
+      width: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 0px 0px;
+      grid-template-areas:
+      "poza1 poza2"
+      "poza3 poza4"
+      "poza5 poza6"
+      "poza7 poza8"
+      "poza9 poza10"
+      "poza11 poza12";
+      
+    }
+  
+    #grid-galerie figure:nth-child(1) {
+      grid-area: poza1;
+    }
+    #grid-galerie figure:nth-child(2) {
+      grid-area: poza2;
+    }
+    #grid-galerie figure:nth-child(3) {
+      grid-area: poza3;
+    }
+    #grid-galerie figure:nth-child(4) {
+      grid-area: poza4;
+    }
+    #grid-galerie figure:nth-child(5) {
+      grid-area: poza5;
+    }
+    #grid-galerie figure:nth-child(6) {
+      grid-area: poza6;
+    }
+    #grid-galerie figure:nth-child(7) {
+      grid-area: poza7;
+    }
+    #grid-galerie figure:nth-child(8) {
+      grid-area: poza8;
+    }
+    #grid-galerie figure:nth-child(9) {
+      grid-area: poza9;
+    }
+    #grid-galerie figure:nth-child(10) {
+      grid-area: poza10;
+    }
+    #grid-galerie figure:nth-child(11) {
+      grid-area: poza11;
+    }
+    #grid-galerie figure:nth-child(12) {
+      grid-area: poza12;
+    }
+    
+  }
+  @media screen and (max-width: 550px) {
+    #grid-galerie {
+      display: block;
+    }
+  
+    #grid-galerie img:hover {
+      transition: none;
+      transform: none;
+      outline: none;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }

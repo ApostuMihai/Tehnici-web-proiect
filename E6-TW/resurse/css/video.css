@@ -1,0 +1,124 @@
+.video {
+    align-items: center;
+    margin-left: 50%;
+    transform: translateX(-40%);
+  }
+  video::cue {
+    background: linear-gradient(#1654a9, #accbe1);
+    color: white;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+ .link-frumos:visited{
+  color: black;
+  background-image: radial-gradient(blue, red);
+  background-position: center;
+  background-size: 0%;
+  transition: all 1s;
+}
+.link-frumos:hover{
+  animation-name:link-frumos-hover;
+  animation-duration: 3s;
+ 
+background-size: 100%;
+}
+
+@keyframes link-frumos-hover {
+  from {background-image: radial-gradient(blue, red); background-size: 0%;}
+  to {background-image: radial-gradient(blue, red); background-size: 100%;}
+} 
+
+.link-frumos:active{
+  border: 5px solid black;
+}
+hr {
+  border: none;
+}
+.box {
+  position: relative;
+  height: 2px;
+  background: black;
+  margin: 20px 0;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transform: translateY(-50%);
+}
+
+.box::before {
+  left: -10px; /* Adjusted position */
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent black;
+}
+
+.box::after {
+  right: -10px; /* Adjusted position */
+  border-width: 10px 15px 10px 0;
+  border-color: transparent black transparent transparent;
+}
+
+#imagine{
+	position:relative;
+	background-image:url("http://irinaciocan.ro/imagini/plante.jpg");
+	background-size:cover;
+	width:500px; 
+	height: 500px;
+	filter:brightness(200%) grayscale(0) ;
+	transition:all 1s linear;
+}
+#imagine:hover {
+  filter:brightness(200%) grayscale(100%);
+}
+
+#imagine:after, #imagine:before{
+	content:" ";
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	
+	transition:all 2s linear;
+}
+
+#imagine:after{
+	background-color:rgb(0,0,255);
+	mix-blend-mode:lighten;
+}
+
+#imagine:before{
+	background-color:rgb(205,0,255);
+	mix-blend-mode:darken;
+}
+
+
+/******* REFLEXIE  *******/
+#text {
+  width: max-content;
+  position: relative;
+  transform: skewY(-15deg);
+  font-size: 1.5rem;
+  transition: color 0.5s linear;
+  left: -43px;
+  margin: 0 auto;
+}
+
+#text-reflectat {
+  position: absolute;
+  left: 100%;
+  transform: skewY(30deg) rotateY(180deg) translate(-10px, -17px);
+}
+
+#text:hover{
+  color: #777777;
+}

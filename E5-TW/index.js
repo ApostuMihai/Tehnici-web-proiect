@@ -4,6 +4,18 @@ const path=require('path');
 const sharp=require('sharp');
 const sass=require('sass');
 const ejs=require('ejs');
+const Client = require("pg").Client;
+
+var client = new Client({
+  database:"proiect-tw",
+  user:"apo",
+  password:"123456",
+  host:"localhost",
+  port:5432
+});
+client.connect();
+
+
 vect_foldere=["temp", "temp1", "backup"]
 for(let folder of vect_foldere){
 let caleFolder = path.join(__dirname, folder)
@@ -56,6 +68,30 @@ app.get('/video', (req, res) => {
     res.render('pagini/video', {imagini: obGlobal.obImagini.imagini});
   });
   
+  app.get("/produse", function(req, res){
+    client.query("select * from prajituri", function(err, rez){
+        if(err){
+            console.log(err);
+            afisareEroare(res, 2);
+        }
+        else{
+            res.render("pagini/produse", {produse: rez.rows, optiuni:[]} )
+        }
+        
+    })
+})
+
+app.get("/produs/:id", function(req, res){
+    client.query(`select * from prajituri where id=${req.params.id}`, function(err, rez){
+        if (err){
+            console.log(err);
+            afisareEroare(res, 2);
+        }
+        else{
+            res.render("pagini/produs", {prod: rez.rows[0]})
+        }
+    })
+})
 app.get("/*", function(req, res){
     //res.send("whatever");
     try{

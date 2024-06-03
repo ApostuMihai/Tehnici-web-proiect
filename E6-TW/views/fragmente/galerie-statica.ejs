@@ -1,0 +1,32 @@
+      <section id="galerie-statica">
+        <h2 class="despre-h2">Galerie foto</h2>
+        <div id="grid-galerie">
+          
+          <%
+          const vLuni = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"]
+          const date = new Date();
+          const lunaCurenta = vLuni[date.getMonth()];
+
+          let nrImag = 0;
+           for (let imag of locals.imagini){
+             
+             if(imag.luni.includes(lunaCurenta)){
+              nrImag +=1
+
+            
+            %>
+          
+          <figure class="gallery-item">
+            <source srcset="<%- imag.fisier_mediu %>" media="(max-width: 900px)" />
+            <source srcset="<%- imag.fisier_mic %>" media="(max-width: 600px)" />
+            <img src="<%- imag.fisier %>" alt="imagine" />
+            <figcaption><%- imag.descriere %></figcaption>
+          </figure>
+          
+          <%if (nrImag == 12){
+            break;
+          }}
+        }%>
+        </div>
+      </section>
+      
