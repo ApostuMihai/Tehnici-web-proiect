@@ -67,18 +67,28 @@ app.get("/*.ejs", function(req, res){
 app.get('/video', (req, res) => {
     res.render('pagini/video', {imagini: obGlobal.obImagini.imagini});
   });
-  
-  app.get("/produse", function(req, res){
-    client.query("select * from prajituri", function(err, rez){
-        if(err){
-            console.log(err);
-            afisareEroare(res, 2);
-        }
-        else{
-            res.render("pagini/produse", {produse: rez.rows, optiuni:[]} )
-        }
-        
-    })
+  app.get("/test", function(req, res) {
+    console.log(req.query);
+    res.send("Check the console for query parameters");
+});
+app.get("/produse", function(req, res){
+    var conditieQuery="";
+    if (req.query.tip){
+        conditieQuery=` where tip_produs='${req.query.tip}'`
+    }
+    console.log(req.query.tip)
+    client.query("select * from unnest(enum_range(null::categ_prajitura))", function(err, rezOptiuni){
+
+        client.query(`select * from prajituri ${conditieQuery}`, function(err, rez){
+            if (err){
+                console.log(err);
+                afisareEroare(res, 2);
+            }
+            else{
+                res.render("pagini/produse", {produse: rez.rows, optiuni:[rezOptiuni.rows]})
+            }
+        })
+    });
 })
 
 app.get("/produs/:id", function(req, res){

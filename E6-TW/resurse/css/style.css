@@ -4,6 +4,11 @@ body {
   --accent-color: #32CD32;
   --background-color: #F5F5F5;
   --text-color: #000000;
+  --culoare1:#F097E1;
+  --culoare-inchisa:#0061ca;
+  --culoare-deschisa:#007BFF;
+  --culoare-text:black;
+  --culoare-text-selectat:white;
   --dim-spatiere:50px;
   padding-left: var(--dim-spatiere);
   padding-right: var(--dim-spatiere);

@@ -1,39 +1,44 @@
 <header>
 
-    <nav class="full-menu">
-        <ul class="main-menu">
-            <li>
-              <div class="home"><a  href="/">Home</a></div>
-            <div class="home-button"><a><i class='bx bx-home'></i></a></div>
-            <div class="hamburger-continer">
-             <div class="hamburger-tab"></div>               
-             <div class="hamburger-tab"></div>             
-             <div class="hamburger-tab"></div>               
+    <nav>
+            
+        <label id="hamburger" for="ch-menu">
+            <div id="container-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
             </div>
-
-            <div class="horizontal-line"></div></li>
-            <li><a href="#">Phones</a>
-                
-                <ul class="sub-menu">
-                    <li><a href="#">Samsung</a></li>
-                    <li><a href="#">iPhone</a></li>
-                    <li><a href="#">Huawei</a></li>
-                </ul>    
+        </label>
+        <input id="ch-menu" type="checkbox">
+        <ul class="meniu">
+            <li class="scanner">
+                <div id="acasa"><a href="/home">Acasa</a></div>
+                <div id="acasa-mediu"><ion-icon name="home-outline"></ion-icon></div>
+            
+            
+                <div id="horizontal-line"></div>
             </li>
-            <li class="scanner"><a href="#">Watches</a>
-              <div class="horizontal-line"></div></li></li>
-            <li><a href="#">Tablets</a>
-              <ul class="sub-menu">
-                <li><a href="#">Samsung</a></li>
-                <li><a href="#">iPhone</a></li>
-                <li><a href="#">Huawei</a></li>
-            </ul>  </li>
-            <li class="scanner"><a href="/video">About</a>
-              <div class="horizontal-line"></div></li></li>
-
+            <li class="scanner"><a href="#">Inregistrare</a>
+                <div id="horizontal-line"></div></li>
+            <li><div>Despre</div>
+                <ul>                        
+                    <li><a href="despre.html#prezentare">Video</a></li>
+                    <li><a href="despre.html#istoric">Duotone</a></li>
+                    <li><a href="despre.html#motivatie">Reflexie</a></li>
+                    <li><a href="despre.html#galerie">Galerie</a></li>
+                </ul>
+            </li>
+            <li><div>Produse</div>
+                <ul>
+                    <li><a href="/produse">Toate</a></li>
+                    <li><a href="/produse?tip=cofetarie">Telefoane</a></li>
+                    <li><a href="/produse?tip=gelaterie">Tablete</a></li>
+                    <li><a href="/produse?tip=patiserie">Accesorii</a></li>
+                </ul>
+            
+            </li>
+            <li class="scanner"><a href="#">Contact</a>
+                <div id="horizontal-line"></div></li>
         </ul>
     </nav>
-    <button type="button" class="btn btn-primary btn-lg">Stil-1-mare</button>
-    <h1 class="main-heading">BestPhone, where technology meets good design & performance</h1>
-
    </header>

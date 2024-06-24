@@ -1,0 +1,137 @@
+/*facem vizibil iconul de hamburger meniu*/
+
+  #horizontal-line {display:none}
+  #container-hamburger {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+  }
+  #hamburger {
+    display: block;
+    display: flex;
+    align-items: center;
+  }
+  .hamburger-line {
+    height: 5px;
+    background-color: black;
+    border-radius: 2.5px;
+    transform: scale(0.9);
+  }
+/* implicit meniul e ascuns*/
+ul.meniu{
+    display:none;
+    position:absolute;
+    width:100%;
+}
+
+/*aici facem vizibil meniul cand faem click pe hamburger meniu*/
+#ch-menu:checked+ul.meniu{
+    display: block;
+    z-index: 2;
+    position: relative;
+    transform-origin: 0 0;
+    animation-name: aparitie_meniu_p;
+    animation-iteration-count:1;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+#ch-menu:checked+ul.meniu>li>div,#ch-menu:checked+ul.meniu>li>a{
+    
+    z-index: 2;
+    position: relative;
+    transform-origin: 50% 50%;
+    animation-name: aparitie_meniu_p_btn;
+    animation-iteration-count:1;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+}
+/*optiunile se intind pe toata latimea containerului*/
+nav ul.meniu li{
+    width:100%;
+}
+
+/*meniul sa vina deasupra continutul de mai jos, fara sa impinga continutul*/
+nav ul.meniu>li ul{
+    position:absolute;
+    width:100%;
+    z-index:200;
+    transform:scale(1,1) !important;
+    opacity: 1 !important;
+}
+
+#ch-menu:checked+ul.meniu>li ul>*{
+    position:relative;
+    z-index:200;
+}
+nav ul.meniu>li:hover>ul{
+    
+    z-index:200;
+    animation:none;
+}
+
+
+/* pentru fiecare element din submeniu generam un triunghiulet alb inaintea lui*/
+nav ul.meniu>li li a:before{
+    content:" \25B7\00A0	";
+    color:white;
+
+}
+
+@keyframes aparitie_meniu_p{
+    0%{
+        clip-path: ellipse(100px 100px at 10% 20%);
+
+        
+    } 
+    20%{
+        clip-path: ellipse(200px 200px at 20% 30%);
+    }
+    30%{
+        clip-path: ellipse(300px 300px at 30% 40%);
+    }
+    40%{
+        clip-path: ellipse(400px 400px at 40% 50%);
+    }
+    50%{
+        clip-path: ellipse(500px 500px at 50% 60%);
+    }
+    60%{
+        clip-path: ellipse(600px 600px at 60% 70%);
+    }
+	100%{
+        clip-path: none;
+    	opacity:1;
+    }
+}
+
+@keyframes aparitie_meniu_p_btn{
+    0%{
+        clip-path: ellipse(100px 100px at 10% 20%);
+
+        
+    } 
+    20%{
+        clip-path: ellipse(200px 200px at 20% 30%);
+    }
+    30%{
+        clip-path: ellipse(300px 300px at 30% 40%);
+    }
+    40%{
+        clip-path: ellipse(400px 400px at 40% 50%);
+    }
+    50%{
+        clip-path: ellipse(500px 500px at 50% 60%);
+    }
+    60%{
+        clip-path: ellipse(600px 600px at 60% 70%);
+    }
+	100%{
+    	clip-path: none;
+    }
+}
